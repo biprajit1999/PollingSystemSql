@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Survey Form</title>
+		
+		
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity=
+"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+crossorigin="anonymous">	
+		
+<link rel="stylesheet" type="text/css" href="./style.css">
+		
+</head>
+<body>
+	
+	
+	<br>
+	<br>
+	<br>
+	<div class="container" >
+		<div class="row">
+		<div class="col-md-3">
+					
+		</div>
+				
+		<div class="col-md-6 main">
+					
+			<form action="/survey_form" method="post">
+					
+			<h1> Eligibility Questionnaire Form </h1>
+            <p>This is a survey form to sortlist student to appear for placements </p>
+			<br>
+							
+			<input class="box" type="text" name="name" id="name" pattern="[A-Za-z\s]{3,}" required title="Please enter a valid name"
+			placeholder="Name" required /><br><br>
+
+            <b> Choose your Gender </b>
+            <select class="box" id = "gender" name="gender" required>
+                <option disabled selected> ---Gender--- </option>
+                <option> Male </option>
+                <option> Female </option>
+                <option> Others </option>
+            </select>
+            <br>
+
+            <input class="box" type="text" id="univid" name="univid" pattern="[0-9]{9}" required title="Please enter a 9 digit number"
+				id="univid" placeholder="University Roll No" required/><br>
+							
+			<input class="box" type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required title="Please enter a valid email address"
+			placeholder="E-Mail " required /><br>
+							
+			<input class="box" type="text" name="phone" id="phone" pattern="[0-9]{10}" required title="Please enter a 10 digit number"
+			placeholder="Phone Number " required/><br>
+
+            <input class="box" type="text" name="cpi" id="cpi" pattern="[0-9]{1,2}(\.[0-9]{1,2})?" min="0" max="100" required title="Please enter your cpi in  range 0-100"
+				placeholder="Enter your cpi precentage out of 100 " required/><br>
+
+            <input class="box" type="text" name="attendence" id="attendence" pattern="[0-9]{1,2}(\.[0-9]{1,2})?" min="0" max="100" required title="Please enter your attendance in  range 0-100"
+            placeholder="Enter your attendence precentage out of 100 " required/><br>
+
+            <input class="box" type="text" name="backlogs" id="backlogs" pattern="[0-9]|10" min="0" max="10" required title="Please enter your cpi in  range 0-40"
+				placeholder="Enter the Number of backlogs " required/><br>
+
+            <input class="box" type="text" name="tech" id="tech" 
+				placeholder="Enter the Technologies you want to work " required/><br>
+            <br>
+            <b> Select the role you want to apply for </b>
+            <select class="box" id = "myList" name="myList" required>
+                <option disabled selected> ---Choose Roles--- </option>
+                <option> Software Developer </option>
+                <option> Fullstack Developer </option>
+                <option>  Cloud administrator </option>
+                <option> Data Scientist </option>
+            </select>
+            <br>
+			<br>
+			<b>Print a copy of your response :- <b>
+			<a style="background-color: #767474; color: white; border-radius: 4px;" id="print" onclick="window.print()"> --Print PDF--  </a>
+			<br><br>
+			<input type="submit" id="submitDetails"
+			name="submitDetails" value="Submit" /><br><br>
+			<a href="./summary.html" id="visual">Visualisation Dashboard</a>
+			<br>
+			<a href="./index.html" id="visual">Log Out</a>
+			
+			</form>
+		
+		</div>
+		
+				
+		<div class="col-md-3">
+		</div>
+		
+				
+	</div>
+	
+	</div>
+
+	
+</body>
+</html>	
