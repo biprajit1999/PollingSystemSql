@@ -7,7 +7,8 @@ const connection = mysql.createConnection({
     host: 'localhost',
 	user: 'root',
 	password: '',
-	database: 'placement'
+	database: 'placement',
+  // socketPath: '/var/run/mysqld/mysqld.sock'
 });
 
 connection.connect((err) => {
