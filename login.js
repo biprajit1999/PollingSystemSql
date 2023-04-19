@@ -16,7 +16,6 @@ connection.connect((err) => {
     return;
   }
   console.log('Connected to MySQL database.');
-  // Create the detail table
   connection.query('CREATE TABLE IF NOT EXISTS login (id INT AUTO_INCREMENT PRIMARY KEY, univid VARCHAR(255), password VARCHAR(255))', (err, result) => {
     if (err) throw err;
     console.log('Table detail created or already exists.');
